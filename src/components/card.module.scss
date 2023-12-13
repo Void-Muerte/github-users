@@ -1,0 +1,12 @@
+.container{
+    display:flex;
+    max-width: 1000px;
+    margin:auto;
+    box-shadow: 0 0 2px 5px #5555;
+    &>div{
+        padding:10px;
+    }
+    img{
+        max-width: 200px;
+    }
+}
