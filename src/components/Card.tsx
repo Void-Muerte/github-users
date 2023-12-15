@@ -1,6 +1,7 @@
 import { profileType } from "@/utils/types";
 import React from "react";
 import styles from "./card.module.scss";
+import Link from "next/link";
 
 interface cardProp {
   profile: profileType;
@@ -8,10 +9,12 @@ interface cardProp {
 function Card({ profile }: cardProp) {
   return (
     <div className={styles.container}>
-      <div>
-        <img src={profile.avatar_url} alt="Avatar" />
+      <div className={styles.brand}>
+        <Link href={profile.login} className={styles.profs}>
+          <img src={profile.avatar_url} alt="Avatar" />
+        </Link>
       </div>
-      <div>
+      <div className={styles.info}>
         <h2>
           {profile.name}({profile.login})
         </h2>

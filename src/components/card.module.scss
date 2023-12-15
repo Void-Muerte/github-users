@@ -1,12 +1,30 @@
-.container{
-    display:flex;
-    max-width: 1000px;
-    margin:auto;
-    box-shadow: 0 0 2px 5px #5555;
-    &>div{
-        padding:10px;
-    }
-    img{
-        max-width: 200px;
-    }
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 0 5px 2px #5555;
+  border-radius: 0.75rem;
+  & > div {
+    padding: 10px;
+  }
+  img {
+    max-width: 200px;
+    align-self: flex-start;
+    border-radius: 0.25rem;
+  }
+  img:hover {
+    outline: 0.5px solid gray;
+    outline-offset: 0.25rem;
+  }
+  .info {
+    flex-grow: 1;
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
+}
+.profs {
+  text-decoration: none;
+  color: black;
+}
+.profs:hover {
+  color: gray;
 }

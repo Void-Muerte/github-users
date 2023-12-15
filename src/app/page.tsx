@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, createContext, useContext } from "react";
-import styles from "./page.module.scss";
+// import styles from "./page.module.scss";
 import Header from "@/components/Header";
 import CardList from "@/components/CardList";
 import UserInput from "@/components/UserInput";
@@ -12,6 +12,7 @@ const ProfilesContext = createContext<GlobalProfileContextTypes>([
   (p: profileType[]) => {},
 ]);
 export const useProfileContext = () => useContext(ProfilesContext);
+
 export default function Home() {
   const [profiles, setProfiles] = useState(defaultProfile);
 

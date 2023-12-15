@@ -54,21 +54,20 @@ function UserInput() {
   };
 
   return (
-    <div className={styles.search}>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={user}
-          onChange={(e) => setUser(e.target.value)}
-          className={styles.input}
-          ref={myRef}
-        />
-        <button className={styles.button} type="submit">
-          Search
-        </button>
-      </form>
+    <>
+      <div className={styles.search}>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+            ref={myRef}
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
       {err && <p className={styles.err}>{err}</p>}
-    </div>
+    </>
   );
 }
 
